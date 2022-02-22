@@ -297,12 +297,12 @@ img{
 }
 
 .home__blob{
-    width: 200px;
+    width: 250px;
     fill: var(--first-color);
 }
 /* Adjust width when I upload my own photo */
 .home__blog-img{
-    width: 170px;
+    width: 180px;
 }
 
 .home__data{
@@ -403,11 +403,19 @@ img{
 }
 
 /*==================== ABOUT ====================*/
-.about__img{
-    width: 200px;
-    border-radius: 0.5rem;
+
+.about__img__container{
+    width: 300px;
+    height: 350px;
     justify-self: center;
     align-self: center;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.about__img{
+    margin: -35px 10px 0px 0px;
 }
 
 .about__description{
@@ -510,42 +518,42 @@ img{
 
 /* Change Percentage of Skills */
 .skills__html{
-  width: 90%;  
+  width: 85%;  
 }
 .skills__css{
-    width: 90%;  
+    width: 85%;  
 }
 .skills__js{
-    width: 90%;  
+    width: 80%;  
 }
 .skills__react{
-    width: 90%;  
+    width: 70%;  
 }
 
-.skills__mongo{
+.skills__node{
     width: 75%;  
 }
-.skills__node{
+.skills__c{
       width: 70%;  
 }
 .skills__python{
-      width: 90%;  
+      width: 65%;  
 }
-.skills__php{
-      width: 90%;  
+.skills__backjs{
+      width: 80%;  
 }
 
 .skills__photoshop{
-    width: 75%;  
+    width: 85%;  
 }
 .skills__premeire{
-      width: 70%;  
+      width: 75%;  
 }
 .skills__illustrator{
-      width: 90%;  
+      width: 70%;  
 }
-.skills__canva{
-      width: 90%;  
+.skills__effects{
+      width: 65%;  
 }
 
 .skills__close .skills__list{
@@ -800,6 +808,24 @@ transform: translateX(0.25rem);
     outline: none
 }
 
+.portfolio__modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* padding: 0 1rem; */
+    /* z-index: var(--z-modal); */
+    /* opacity: 0;  */
+    /* visibility: hidden; */
+    transition: .3s
+}
+
+
 /*==================== PROJECT IN MIND ====================*/
 
 .project{
@@ -825,9 +851,16 @@ transform: translateX(0.25rem);
     color: #FFF;
 }
 
-.project__img{
-    width: 232px;
+.project__picture{
+    width: 300px;
+    height: 275px;
     justify-self: center;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.project__img{
+    margin: 20px 0px -150px 0px;
 }
 
 /*==================== CONTACT ME ====================*/
@@ -882,7 +915,10 @@ transform: translateX(0.25rem);
 /*==================== FOOTER ====================*/
 
 .footer{
-   padding-top: 2rem; 
+   padding-top: 2rem;
+   bottom:0;
+   width:100%;
+   height:60px;
 }
 
 .footer__container{
@@ -1003,6 +1039,20 @@ transform: translateX(0.25rem);
 
     .home__blob {
         width: 180px;
+    }
+
+    .about__img__container{
+        width: 285px;
+        height: 300px;
+        justify-self: center;
+        align-self: center;
+        object-fit: cover;
+        overflow: hidden;
+        border-radius: 0.5rem;
+    }
+    
+    .about__img{
+        margin: -35px 10px 0px 0px;
     }
 
     .skills__title {
@@ -1244,10 +1294,10 @@ transform: translateX(0.25rem);
         font-size: 3.5rem;
     }
     .swiper-button-prev {
-        left: 3.5rem;
+        left: -3.5rem;
     }
     .swiper-button-next {
-        right: 3.5rem;
+        right: -3.5rem;
     }
     .swiper-container-horizontal > .swiper-pagination-bullets {
         bottom: -4.5rem
